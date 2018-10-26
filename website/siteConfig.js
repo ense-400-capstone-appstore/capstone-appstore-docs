@@ -7,15 +7,15 @@
 const siteConfig = {
     title: "Capstone Appstore", // Title for your website.
     tagline: "Documentation for the Capstone Appstore Project",
-    url: "https://your-docusaurus-test-site.com", // Your website URL
-    baseUrl: "/", // Base URL for your project */
+    url: "https://ense-400-capstone-appstore.github.io", // Your website URL
+    baseUrl: "/capstone-appstore-docs/", // Base URL for your project */
     // For github.io type URLs, you would set the url and baseUrl like:
     //   url: 'https://facebook.github.io',
     //   baseUrl: '/test-site/',
 
     // Used for publishing and more
     projectName: "capstone-appstore-docs",
-    organizationName: "capstone-appstore",
+    organizationName: "ense-400-capstone-appstore",
     // For top-level user or org sites, the organization is still the same.
     // e.g., for the https://JoelMarcey.github.io site, it would be set like...
     //   organizationName: 'JoelMarcey'
