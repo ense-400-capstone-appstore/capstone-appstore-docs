@@ -10,6 +10,7 @@ const React = require("react");
 const CompLibrary = require("../../core/CompLibrary.js");
 
 const Container = CompLibrary.Container;
+const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
@@ -20,7 +21,11 @@ function docUrl(doc, language) {
 class Help extends React.Component {
     render() {
         const language = this.props.language || "";
-        const supportLinks = [
+        const helpLinks = [
+            {
+                content: `[We host all of our source code on GitHub!](https://github.com/ense-400-capstone-appstore)`,
+                title: "Check Out the Source Code"
+            },
             {
                 content: `Learn more using the [documentation on this site.](${docUrl(
                     "doc1.html",
@@ -35,22 +40,25 @@ class Help extends React.Component {
                 <Container className="mainContainer documentContainer postContainer">
                     <div className="post">
                         <header className="postHeader">
-                            <h1>Need help?</h1>
+                            <h1>What is this?</h1>
                         </header>
                         <p>
-                            This project is maintained by a dedicated group of
-                            people.
+                            This site hosts documentation for a Software Systems
+                            Engineering capstone projects by
+                            <a href="https://github.com/shevtsod">@shevtsod</a>
+                            ,&nbsp;
+                            <a href="https://github.com/oscar666666">
+                                @oscar666666
+                            </a>
+                            ,&nbsp;and&nbsp;
+                            <a href="https://github.com/Uyser">@Uyser</a>
+                            &nbsp;from the University of Regina.
                         </p>
-                        <div style={{ textAlign: "center" }}>
-                            <h2>Browse Docs</h2>
-                            <p>
-                                Learn more using the{" "}
-                                <a href={docUrl("doc1.html")}>
-                                    Documentation on this site.
-                                </a>
-                            </p>
-                        </div>
-                        <div contents={supportLinks} layout="oneColumn" />
+                        <GridBlock
+                            align="center"
+                            layout="threeColumn"
+                            contents={helpLinks}
+                        />
                     </div>
                 </Container>
             </div>

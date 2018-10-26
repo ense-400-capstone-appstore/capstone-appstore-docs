@@ -37,8 +37,8 @@ const siteConfig = {
 
     /* Colors for website */
     colors: {
-        primaryColor: "#2E8555",
-        secondaryColor: "#205C3B"
+        primaryColor: "#4c6893",
+        secondaryColor: "#32496d"
     },
 
     /* Custom fonts for website */
@@ -73,11 +73,13 @@ const siteConfig = {
 
     // Open Graph and Twitter card images.
     ogImage: "img/docusaurus.png",
-    twitterImage: "img/docusaurus.png"
+    twitterImage: "img/docusaurus.png",
 
     // You may provide arbitrary config keys to be used as needed by your
     // template. For example, if you need your repo's URL...
-    //   repoUrl: 'https://github.com/facebook/test-site',
+    repoUrl:
+        "https://github.com/ense-400-capstone-appstore/capstone-appstore-docs",
+    orgUrl: "https://github.com/ense-400-capstone-appstore/"
 };
 
 module.exports = siteConfig;
