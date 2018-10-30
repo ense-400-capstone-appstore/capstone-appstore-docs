@@ -44,7 +44,7 @@ class Help extends React.Component {
                         </header>
                         <p>
                             This site hosts documentation for a Software Systems
-                            Engineering capstone projects by
+                            Engineering capstone project by&nbsp;
                             <a href="https://github.com/shevtsod">@shevtsod</a>
                             ,&nbsp;
                             <a href="https://github.com/oscar666666">
