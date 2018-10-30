@@ -4,5 +4,4 @@
 <url> <loc>https://ense-400-capstone-appstore.github.io/capstone-appstore-docs/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://ense-400-capstone-appstore.github.io/capstone-appstore-docs/en/index" /> </url>
 <url> <loc>https://ense-400-capstone-appstore.github.io/capstone-appstore-docs/users</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://ense-400-capstone-appstore.github.io/capstone-appstore-docs/en/users" /> </url>
 <url> <loc>https://ense-400-capstone-appstore.github.io/capstone-appstore-docs/docs/doc1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://ense-400-capstone-appstore.github.io/capstone-appstore-docs/docs/doc1" /> </url>
-<url> <loc>https://ense-400-capstone-appstore.github.io/capstone-appstore-docs/docs/doc2</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://ense-400-capstone-appstore.github.io/capstone-appstore-docs/docs/doc2" /> </url>
 </urlset>
