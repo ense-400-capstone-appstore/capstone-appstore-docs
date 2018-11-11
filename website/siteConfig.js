@@ -20,6 +20,9 @@ const siteConfig = {
     // e.g., for the https://JoelMarcey.github.io site, it would be set like...
     //   organizationName: 'JoelMarcey'
 
+    // GitHub Pages CNAME file
+    cname: "docs.matryoshkadoll.me",
+
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
         { page: "index", label: "Home" },
