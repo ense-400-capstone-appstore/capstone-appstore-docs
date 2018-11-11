@@ -5,17 +5,17 @@
 // const users = [];
 
 const siteConfig = {
-    title: "Capstone Appstore", // Title for your website.
-    tagline: "Documentation for the Capstone Appstore Project",
-    url: "https://ense-400-capstone-appstore.github.io", // Your website URL
-    baseUrl: "/capstone-appstore-docs/", // Base URL for your project */
+    title: "Matryoshka", // Title for your website.
+    tagline: "Documentation for the Matryoshka Project",
+    url: "https://docs.matryoshkadoll.me", // Your website URL
+    baseUrl: "/", // Base URL for your project */
     // For github.io type URLs, you would set the url and baseUrl like:
     //   url: 'https://facebook.github.io',
     //   baseUrl: '/test-site/',
 
     // Used for publishing and more
-    projectName: "capstone-appstore-docs",
-    organizationName: "ense-400-capstone-appstore",
+    projectName: "matryoshka-docs",
+    organizationName: "matryoshkadoll",
     // For top-level user or org sites, the organization is still the same.
     // e.g., for the https://JoelMarcey.github.io site, it would be set like...
     //   organizationName: 'JoelMarcey'
@@ -56,7 +56,7 @@ const siteConfig = {
   */
 
     // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-    copyright: `Copyright © ${new Date().getFullYear()} Capstone Appstore`,
+    copyright: `Copyright © ${new Date().getFullYear()} Matryoshka`,
 
     highlight: {
         // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -77,9 +77,8 @@ const siteConfig = {
 
     // You may provide arbitrary config keys to be used as needed by your
     // template. For example, if you need your repo's URL...
-    repoUrl:
-        "https://github.com/ense-400-capstone-appstore/capstone-appstore-docs",
-    orgUrl: "https://github.com/ense-400-capstone-appstore/"
+    repoUrl: "https://github.com/matryoshkadoll/matryoshka-docs",
+    orgUrl: "https://github.com/matryoshkadoll/"
 };
 
 module.exports = siteConfig;

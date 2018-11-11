@@ -23,7 +23,7 @@ class Help extends React.Component {
         const language = this.props.language || "";
         const helpLinks = [
             {
-                content: `[We host all of our source code on GitHub!](https://github.com/ense-400-capstone-appstore)`,
+                content: `[We host all of our source code on GitHub!](https://github.com/matryoshkadoll)`,
                 title: "Check Out the Source Code"
             },
             {
