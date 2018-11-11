@@ -43,14 +43,12 @@ class Footer extends React.Component {
                     </div>
                     <div>
                         <h5>More</h5>
-                        <a href="https://github.com/ense-400-capstone-appstore">
-                            GitHub
-                        </a>
+                        <a href="https://github.com/matryoshkadoll">GitHub</a>
                         <a
                             className="github-button"
                             href={this.props.config.repoUrl}
                             data-icon="octicon-star"
-                            data-count-href="/ense-400-capstone-appstore/capstone-appstore-docs"
+                            data-count-href="/matryoshkadoll/matryoshka-docs"
                             data-show-count="true"
                             data-count-aria-label="# stargazers on GitHub"
                             aria-label="Star this project on GitHub"

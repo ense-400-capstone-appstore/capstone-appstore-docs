@@ -52,7 +52,7 @@ class Help extends React.Component {
                             </a>
                             ,&nbsp;and&nbsp;
                             <a href="https://github.com/Uyser">@Uyser</a>
-                            &nbsp;from the University of Regina.
+                            &nbsp;for the University of Regina.
                         </p>
                         <GridBlock
                             align="center"
