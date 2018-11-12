@@ -3,5 +3,8 @@
 <url> <loc>https://matryoshkadoll.github.io/help</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://matryoshkadoll.github.io/en/help" /> </url>
 <url> <loc>https://matryoshkadoll.github.io/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://matryoshkadoll.github.io/en/index" /> </url>
 <url> <loc>https://matryoshkadoll.github.io/users</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://matryoshkadoll.github.io/en/users" /> </url>
-<url> <loc>https://matryoshkadoll.github.io/docs/doc1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://matryoshkadoll.github.io/docs/doc1" /> </url>
+<url> <loc>https://matryoshkadoll.github.io/docs/en/app/getting-started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://matryoshkadoll.github.io/docs/en/app/getting-started" /> </url>
+<url> <loc>https://matryoshkadoll.github.io/docs/en/docs/getting-started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://matryoshkadoll.github.io/docs/en/docs/getting-started" /> </url>
+<url> <loc>https://matryoshkadoll.github.io/docs/en/general/getting-started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://matryoshkadoll.github.io/docs/en/general/getting-started" /> </url>
+<url> <loc>https://matryoshkadoll.github.io/docs/en/server/getting-started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://matryoshkadoll.github.io/docs/en/server/getting-started" /> </url>
 </urlset>
