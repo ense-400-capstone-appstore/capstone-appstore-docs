@@ -1,5 +1,8 @@
 {
     "docs": {
-        "General": ["doc1"]
+        "General": ["general/getting-started"],
+        "Server": ["server/getting-started"],
+        "App": ["app/getting-started"],
+        "Docs": ["docs/getting-started"]
     }
 }

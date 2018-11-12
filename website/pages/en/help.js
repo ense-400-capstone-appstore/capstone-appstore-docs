@@ -28,7 +28,7 @@ class Help extends React.Component {
             },
             {
                 content: `Learn more using the [documentation on this site.](${docUrl(
-                    "doc1.html",
+                    "general/getting-started",
                     language
                 )})`,
                 title: "Browse Docs"
@@ -44,15 +44,13 @@ class Help extends React.Component {
                         </header>
                         <p>
                             This site hosts documentation for a Software Systems
-                            Engineering capstone project by&nbsp;
-                            <a href="https://github.com/shevtsod">@shevtsod</a>
-                            ,&nbsp;
+                            Engineering capstone project by{" "}
+                            <a href="https://github.com/shevtsod">@shevtsod</a>,{" "}
                             <a href="https://github.com/oscar666666">
                                 @oscar666666
                             </a>
-                            ,&nbsp;and&nbsp;
-                            <a href="https://github.com/Uyser">@Uyser</a>
-                            &nbsp;for the University of Regina.
+                            , and <a href="https://github.com/Uyser">@Uyser</a>{" "}
+                            for the University of Regina.
                         </p>
                         <GridBlock
                             align="center"

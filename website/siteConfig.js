@@ -23,11 +23,25 @@ const siteConfig = {
     // GitHub Pages CNAME file
     cname: "docs.matryoshkadoll.me",
 
+    // "Edit this doc" button on each page
+    editUrl:
+        "https://github.com/matryoshkadoll/matryoshka-docs/blob/master/docs/",
+
+    // Algolia search API
+    algolia: {
+        apiKey: "",
+        indexName: "",
+        algoliaOptions: {} // Optional, if provided by Algolia
+    },
+
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
         { href: "/", label: "Home" },
-        { doc: "doc1", label: "Docs" },
-        { page: "help", label: "Help" }
+        { doc: "general/getting-started", label: "Docs" },
+        { page: "help", label: "Help" },
+        { href: "https://github.com/matryoshkadoll/", label: "GitHub" },
+        { search: true },
+        { href: "https://matryoshkadoll.me", label: "Back to Matryoshka" }
     ],
 
     // If you have users set above, you add it here:
@@ -73,6 +87,9 @@ const siteConfig = {
     onPageNav: "separate",
     // No .html extensions for paths.
     cleanUrl: true,
+
+    // Scroll to top button
+    scrollToTop: true,
 
     // Open Graph and Twitter card images.
     ogImage: "img/docusaurus.png",
