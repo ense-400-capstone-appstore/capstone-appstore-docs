@@ -81,7 +81,6 @@ class HomeSplash extends React.Component {
         const language = this.props.language || "";
         return (
             <SplashContainer>
-                {/* <Logo img_src={imgUrl("docusaurus.svg")} /> */}
                 <div className="inner">
                     <ProjectTitle />
                     <PromoSection>
@@ -105,7 +104,7 @@ const Block = props => (
         background={props.background}
     >
         <GridBlock
-            align="center"
+            align={props.align || "center"}
             contents={props.children}
             layout={props.layout}
         />
@@ -117,13 +116,13 @@ const Features = () => (
         {[
             {
                 content: "This is the content of my feature",
-                image: imgUrl("docusaurus.svg"),
+                image: imgUrl("Icon.svg"),
                 imageAlign: "top",
                 title: "Feature One"
             },
             {
                 content: "The content of my second feature",
-                image: imgUrl("docusaurus.svg"),
+                image: imgUrl("Icon.svg"),
                 imageAlign: "top",
                 title: "Feature Two"
             }
@@ -146,7 +145,7 @@ const LearnHow = () => (
         {[
             {
                 content: "Talk about learning how to use this",
-                image: imgUrl("docusaurus.svg"),
+                image: imgUrl("Icon.svg"),
                 imageAlign: "right",
                 title: "Learn How"
             }
@@ -159,7 +158,7 @@ const TryOut = () => (
         {[
             {
                 content: "Talk about trying this out",
-                image: imgUrl("docusaurus.svg"),
+                image: imgUrl("Icon.svg"),
                 imageAlign: "left",
                 title: "Try it Out"
             }
@@ -167,15 +166,21 @@ const TryOut = () => (
     </Block>
 );
 
-const Description = () => (
-    <Block background="dark">
+const Description = props => (
+    <Block background="dark" align="left">
         {[
             {
-                content:
-                    "This is another description of how this project is useful",
-                image: imgUrl("docusaurus.svg"),
+                image: imgUrl("Icon.svg"),
                 imageAlign: "right",
-                title: "Description"
+                title: "Welcome!",
+                content:
+                    "Welcome to the documentation site for the Matryoshka project! Please see our [Getting Started](" +
+                    docUrl("general/getting-started", props.language) +
+                    ") page to learn more about the project. Among other things, you will find:\n" +
+                    " * An introduction to how the project is laid out and how to navigate the documentation.\n" +
+                    " * In-depth information about the server, client, and even this documentation site.\n" +
+                    " * The server REST API reference.\n" +
+                    " * ... and maybe even more!"
             }
         ]}
     </Block>
@@ -218,17 +223,18 @@ class Index extends React.Component {
         return (
             <div>
                 <HomeSplash language={language} />
+                <h2 style={{ textAlign: "center" }}>IMPORTANT NOTE</h2>
+                <h3 style={{ textAlign: "center" }}>
+                    This project is still very early into development and highly
+                    unstable!
+                </h3>
                 <div className="mainContainer">
-                    <div style={{ textAlign: "center" }}>
-                        <h2>This site is under construction!</h2>
-                    </div>
-
                     {/* <Features />
                     <FeatureCallout />
                     <LearnHow />
-                    <TryOut />
-                    <Description />
-                    <Showcase language={language} /> */}
+                    <TryOut /> */}
+                    <Description language={language} />
+                    {/* <Showcase language={language} /> */}
                 </div>
             </div>
         );
