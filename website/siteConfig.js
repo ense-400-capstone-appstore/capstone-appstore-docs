@@ -7,7 +7,7 @@
 const siteConfig = {
     title: "Matryoshka", // Title for your website.
     tagline: "Documentation for the Matryoshka Project",
-    url: "https://matryoshkadoll.github.io", // Your website URL
+    url: "https://docs.matryoshkadoll.me", // Your website URL
     baseUrl: "/", // Base URL for your project */
     // For github.io type URLs, you would set the url and baseUrl like:
     //   url: 'https://facebook.github.io',
@@ -29,8 +29,8 @@ const siteConfig = {
 
     // Algolia search API
     algolia: {
-        apiKey: "",
-        indexName: "",
+        apiKey: "155140484a2f197c0b25751d4c8dd796",
+        indexName: "matryoshkadoll",
         algoliaOptions: {} // Optional, if provided by Algolia
     },
 
