@@ -1,5 +1,3 @@
-# Matryoshka Docs
-
 ![Matryoshka Logo](./website/static/img/brand/256h/Logo_x256.png)
 
 # Matryoshka Docs
