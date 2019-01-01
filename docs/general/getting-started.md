@@ -3,8 +3,6 @@ id: getting-started
 title: Getting Started
 ---
 
-## Welcome
-
 Welcome to the documentation for the Matryoshka project, a private appstore for
 the Android operating system that aims to offer an open-source alternative to
 currently available options.

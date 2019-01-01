@@ -1,7 +1,17 @@
 {
     "docs": {
         "General": ["general/getting-started"],
-        "Server": ["server/getting-started"],
+        "Server": [
+            "server/getting-started",
+            {
+                "type": "subcategory",
+                "label": "Installation",
+                "ids": [
+                    "server/installation/linux-ubuntu-18-04",
+                    "server/installation/windows-10"
+                ]
+            }
+        ],
         "App": ["app/getting-started"],
         "Docs": ["docs/getting-started"]
     }
