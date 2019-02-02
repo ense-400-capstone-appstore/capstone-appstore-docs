@@ -1,16 +1,13 @@
 {
     "docs": {
         "Getting Started": ["welcome"],
-        "App": ["app/getting-started"],
+        "App": ["app/getting_started"],
         "Server": [
-            "server/getting-started",
+            "server/getting_started",
             {
                 "type": "subcategory",
-                "label": "Installation",
-                "ids": [
-                    "server/installation/linux-ubuntu-18-04",
-                    "server/installation/windows-10"
-                ]
+                "label": "API",
+                "ids": ["server/api/authentication", "server/api/androidapps"]
             }
         ]
     }

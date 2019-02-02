@@ -84,10 +84,8 @@ class HomeSplash extends React.Component {
                 <div className="inner">
                     <ProjectTitle />
                     <PromoSection>
-                        <Button
-                            href={docUrl("general/getting-started", language)}
-                        >
-                            Getting Started
+                        <Button href={docUrl("welcome", language)}>
+                            Welcome
                         </Button>
                         <Button href={siteConfig.orgUrl}>GitHub</Button>
                     </PromoSection>
@@ -174,8 +172,8 @@ const Description = props => (
                 imageAlign: "right",
                 title: "Welcome!",
                 content:
-                    "Welcome to the documentation site for the Matryoshka project! Please see our [Getting Started](" +
-                    docUrl("general/getting-started", props.language) +
+                    "Welcome to the documentation site for the Matryoshka project! Please see our [Welcome](" +
+                    docUrl("welcome", props.language) +
                     ") page to learn more about the project. Among other things, you will find:\n" +
                     " * An introduction to how the project is laid out and how to navigate the documentation.\n" +
                     " * In-depth information about the server, client, and even this documentation site.\n" +
@@ -224,7 +222,7 @@ class Index extends React.Component {
             <div>
                 <HomeSplash language={language} />
                 <h2 style={{ textAlign: "center" }}>IMPORTANT NOTE</h2>
-                <h3 style={{ textAlign: "center" }}>
+                <h3 style={{ textAlign: "center", color: "FireBrick" }}>
                     This project is still very early into development and highly
                     unstable!
                 </h3>
