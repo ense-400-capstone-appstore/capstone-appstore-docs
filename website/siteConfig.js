@@ -37,7 +37,7 @@ const siteConfig = {
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
         { href: "/", label: "Home" },
-        { doc: "general/getting-started", label: "Docs" },
+        { doc: "welcome", label: "Docs" },
         { page: "help", label: "Help" },
         { href: "https://github.com/matryoshkadoll/", label: "GitHub" },
         { search: true },
@@ -60,16 +60,16 @@ const siteConfig = {
 
     /* Custom fonts for website */
     /*
-  fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },
+    fonts: {
+        myFont: [
+        "Times New Roman",
+        "Serif"
+        ],
+        myOtherFont: [
+        "-apple-system",
+        "system-ui"
+        ]
+    },
   */
 
     // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
@@ -77,19 +77,33 @@ const siteConfig = {
 
     highlight: {
         // Highlight.js theme to use for syntax highlighting in code blocks.
-        theme: "default"
+        theme: "tomorrow-night"
     },
 
     // Add custom scripts here that would be placed in <script> tags.
-    scripts: ["https://buttons.github.io/buttons.js"],
+    scripts: [
+        "https://buttons.github.io/buttons.js",
+        "https://buttons.github.io/buttons.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
+        "/js/code-block-buttons.js"
+    ],
+    stylesheets: ["/css/code-block-buttons.css"],
 
     // On page navigation for the current documentation page.
     onPageNav: "separate",
+
     // No .html extensions for paths.
     cleanUrl: true,
 
     // Scroll to top button
     scrollToTop: true,
+
+    // Collapsible sidebars
+    docsSideNavCollapsible: true,
+
+    // Last updated on text
+    enableUpdateBy: true,
+    enableUpdateTime: true,
 
     // Open Graph and Twitter card images.
     ogImage: "img/docusaurus.png",

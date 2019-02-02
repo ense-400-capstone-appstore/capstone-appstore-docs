@@ -1,6 +1,7 @@
 {
     "docs": {
-        "General": ["general/getting-started"],
+        "Getting Started": ["welcome"],
+        "App": ["app/getting-started"],
         "Server": [
             "server/getting-started",
             {
@@ -11,8 +12,6 @@
                     "server/installation/windows-10"
                 ]
             }
-        ],
-        "App": ["app/getting-started"],
-        "Docs": ["docs/getting-started"]
+        ]
     }
 }

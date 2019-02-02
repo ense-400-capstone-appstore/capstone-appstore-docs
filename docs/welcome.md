@@ -1,10 +1,7 @@
 ---
-id: version-0.1.0-getting-started
-title: Getting Started
-original_id: getting-started
+id: welcome
+title: Welcome
 ---
-
-## Welcome
 
 Welcome to the documentation for the Matryoshka project, a private appstore for
 the Android operating system that aims to offer an open-source alternative to
@@ -21,7 +18,7 @@ The entirety of the project's source code is publicly hosted on
 
 This software follows a client-server architecture, and our GitHub source code
 reflects this by having three distinct repositories for each component. Moreso,
-our documentation on this site is split into three top-level sections covering
+our documentation on this site is split into two top-level sections covering
 each of these components in detail.
 
 ### [matryoshka-server](https://github.com/matryoshkadoll/matryoshka-server)
@@ -44,5 +41,3 @@ This site!
 The documentation for this project is written using Facebook's
 [Docusaurus](https://docusaurus.io/en/) to be completely decoupled from the rest
 of the source code.
-
-For all of our documentation on the docs, see [Docs/Getting Started](docs/getting-started.md)
