@@ -4,6 +4,7 @@
         "App": ["app/getting_started"],
         "Server": [
             "server/getting_started",
+            "server/cli",
             {
                 "type": "subcategory",
                 "label": "API",
