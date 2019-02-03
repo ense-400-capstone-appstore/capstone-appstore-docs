@@ -5,6 +5,7 @@
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/app/getting_started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/app/getting_started" /> </url>
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/server/api/androidapps</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/server/api/androidapps" /> </url>
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/server/api/authentication</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/server/api/authentication" /> </url>
+<url> <loc>https://docs.matryoshkadoll.me/docs/en/server/cli</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/server/cli" /> </url>
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/server/getting_started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/server/getting_started" /> </url>
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/welcome</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/welcome" /> </url>
 </urlset>
