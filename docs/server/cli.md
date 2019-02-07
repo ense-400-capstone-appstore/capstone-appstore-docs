@@ -13,8 +13,7 @@ Commands also include several other flags such as `--quiet` that allow the comma
 
 **Description:**
 
-Install or update the application for
-development or production.
+Install or re-install the application.
 
 **Usage:**
 
@@ -24,7 +23,27 @@ development or production.
 
 -   `-c`, `--clean-install`
     -   Drops and rebuilds the database
--   `-p`, `--production`
-    -   Also runs commands specific to production deployments
 
 > **NOTE:** Using the `--clean-install` flag is _extremely dangerous_ because it deletes all application data. Only use it if you are planning to start from scratch.
+
+> **NOTE:** If updating the application, run this command after [`app:update`]
+
+## `app:update`
+
+**Description**
+
+Update application code and dependencies.
+
+**Usage:**
+
+`app:update [options]`
+
+**Options:**
+
+-   `-r`, `--release[=RELEASE]`
+    -   Specifies release to update to (e.g., 1.0.0)
+
+> **NOTE:** If updating the application, run this command before [`app:install`]
+
+[`app:install`]: #app-install
+[`app:update`]: #app-update
