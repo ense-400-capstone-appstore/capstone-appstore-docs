@@ -3,7 +3,7 @@ id: androidapps
 title: AndroidApps
 ---
 
-## `POST /api/v1/android_apps/`
+## `POST /api/v1/android_apps`
 
 Create a new `AndroidApp`.
 
@@ -51,9 +51,9 @@ Create a new `AndroidApp`.
 }
 ```
 
-## `GET /api/v1/android_apps/`
+## `GET /api/v1/android_apps`
 
-Index all `AndroidApps`
+Index all `AndroidApps`.
 
 ## `GET /api/v1/android_apps/{id}`
 
