@@ -7,8 +7,12 @@
             "server/cli",
             {
                 "type": "subcategory",
-                "label": "API",
-                "ids": ["server/api/authentication", "server/api/androidapps"]
+                "label": "API v1",
+                "ids": [
+                    "server/api/v1/authentication",
+                    "server/api/v1/androidapps",
+                    "server/api/v1/users"
+                ]
             }
         ]
     }

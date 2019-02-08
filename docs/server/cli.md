@@ -30,7 +30,7 @@ Install or re-install the application.
 
 ## `app:update`
 
-**Description**
+**Description:**
 
 Update application code and dependencies.
 
