@@ -9,18 +9,361 @@ title: Users
 
 Create a new `User`.
 
+**Parameters:**
+
+| Parameter  | Type     | Required | Description                       |
+| ---------- | -------- | -------- | --------------------------------- |
+| `name`     | `string` | ✔️       | Your full name (e.g., `John Doe`) |
+| `email`    | `string` | ✔️       | Your email address used to login. |
+| `password` | `string` | ✔️       | Your password used to login.      |
+
+**Authorization:**
+
+`admin`
+
+**Example Request:**
+
+`POST /api/v1/users`
+
+```json
+{
+    "name": "User",
+    "email": "user@test.com",
+    "password": "123456"
+}
+```
+
+**Example Response:**
+
+```http
+201 Created
+```
+
+```json
+{
+  "data": {
+    "id": 2,
+    "name": "User",
+    "email": "user@test.com",
+    "avatar": "public\/users\/default.png",
+    "created_at": {
+      "date": "2019-02-11 01:32:30.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    },
+    "updated_at": {
+      "date": "2019-02-11 01:32:30.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    }
+  }
+}
+```
+
+**Error Responses:**
+
+```
+422 Unprocessable Entity
+```
+
 ## `GET /api/v1/users`
 
 Index all `Users`.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+N/A
+
+**Example Request:**
+
+`GET /api/v1/users`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Administrator",
+      "email": "admin@matryoshkadoll.me",
+      "created_at": {
+        "date": "2019-02-11 02:55:34.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "updated_at": {
+        "date": "2019-02-11 02:55:34.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Vendor",
+      "email": "vendor@matryoshkadoll.me",
+      "created_at": {
+        "date": "2019-02-11 02:55:34.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "updated_at": {
+        "date": "2019-02-11 02:55:34.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    },
+    {
+      "id": 3,
+      "name": "User",
+      "email": "user@matryoshkadoll.me",
+      "created_at": {
+        "date": "2019-02-11 02:55:34.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "updated_at": {
+        "date": "2019-02-11 02:55:34.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    }
+  ],
+  "links": {
+    "first": "http:\/\/127.0.0.1:8000\/api\/v1\/users?page=1",
+    "last": "http:\/\/127.0.0.1:8000\/api\/v1\/users?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "http:\/\/127.0.0.1:8000\/api\/v1\/users",
+    "per_page": 15,
+    "to": 3,
+    "total": 3
+  }
+}
+```
+
+**Error Responses:**
+
+N/A
 
 ## `GET /api/v1/users/{id}`
 
 Get a `User` by ID.
 
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+N/A
+
+**Example Request:**
+
+`GET /api/v1/users/1`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": {
+    "id": 1,
+    "name": "Administrator",
+    "email": "admin@matryoshkadoll.me",
+    "created_at": {
+      "date": "2019-02-11 02:55:34.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    },
+    "updated_at": {
+      "date": "2019-02-11 02:55:34.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    }
+  }
+}
+```
+
+**Error Responses:**
+
+```http
+404 Not Found
+```
+
 ## `PATCH /api/v1/users/{id}`
 
 Update an existing `User` by ID.
 
+**Parameters:**
+
+| Parameter  | Type     | Required | Description                       |
+| ---------- | -------- | -------- | --------------------------------- |
+| `name`     | `string` |          | Your full name (e.g., `John Doe`) |
+| `email`    | `string` |          | Your email address used to login. |
+| `password` | `string` |          | Your password used to login.      |
+
+**Authorization:**
+
+`admin`
+
+**Example Request:**
+
+`PATCH /api/v1/users/1`
+
+```json
+{
+    "name": "John Doe",
+    "password": "123123"
+}
+```
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": {
+    "id": 1,
+    "name": "John Doe",
+    "email": "user@test.com",
+    "created_at": {
+      "date": "2019-02-11 03:57:03.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    },
+    "updated_at": {
+      "date": "2019-02-11 03:57:15.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    }
+  }
+}
+```
+
+**Error Responses:**
+
+```http
+404 Not Found
+```
+
+```http
+422 Unprocessable Entity
+```
+
 ## `DELETE /api/v1/users/{id}`
 
 Delete an existing `User` by ID.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+`admin`
+
+**Example Request:**
+
+`DELETE /api/v1/users/1`
+
+**Example Response:**
+
+```http
+204 No Content
+```
+
+**Error Responses:**
+
+```http
+404 Not Found
+```
+
+## `POST /api/v1/users/{id}/avatar`
+
+Upload a new avatar for a `User` by ID.
+
+**Parameters:**
+
+| Parameter | Type   | Required | Description                         |
+| --------- | ------ | -------- | ----------------------------------- |
+| `avatar`  | `file` | ✔️       | The image file to set as an avatar. |
+
+> **NOTE:** Set HTTP header `Content-Type: multipart/form-data`.
+
+> **NOTE:** There are some restrictions on `avatar`:
+>  - Must be below `5MB` in size.
+>  - Must be of filetype `jpg`, `bmp`, or `png`.
+>  - The server converts it to a `256x256` `jpg` image after upload.
+
+**Authorization:**
+
+`admin`, current `user`
+
+**Example Request:**
+
+`POST /api/v1/users/1/avatar`
+
+```http
+avatar: my_image.png
+```
+
+**Example Response:**
+
+```http
+201 Created
+```
+
+**Error Responses:**
+
+```http
+422 Unprocessable Entity
+```
+
+## `GET /api/v1/users/{id}/avatar`
+
+Get the raw image for the `User's` current avatar by ID.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+N/A
+
+**Example Request:**
+
+`GET /api/v1/users/1/avatar`
+
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+![avatar.jpg](assets/avatar.jpg)
+
+**Error Responses:**
+
+N/A

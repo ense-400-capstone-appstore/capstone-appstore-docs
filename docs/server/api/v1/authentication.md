@@ -17,6 +17,8 @@ Authorization: Bearer YOUR_BEARER_TOKEN_HERE
 
 > **NOTE:** Even with a token, you will only be able to access resources that you are authorized to access based on your role, i.e., `admin`, `vendor`, or `user`.
 
+> **NOTE:** For every request to the API, be sure to set the HTTP header `Accept: application/json`. If you are submitting a JSON payload in your request, set `Content-Type: application/json` as well.
+
 ## `POST /api/v1/login`
 
 Authenticate and retrieve an `access_token` to access application resources.
