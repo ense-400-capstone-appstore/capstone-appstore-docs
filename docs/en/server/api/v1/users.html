@@ -42,15 +42,273 @@
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="post-api-v1-users"></a><a href="#post-api-v1-users" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POST /api/v1/users</code></h2>
 <p>Create a new <code>User</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>name</code></td><td><code>string</code></td><td>✔️</td><td>Your full name (e.g., <code>John Doe</code>)</td></tr>
+<tr><td><code>email</code></td><td><code>string</code></td><td>✔️</td><td>Your email address used to login.</td></tr>
+<tr><td><code>password</code></td><td><code>string</code></td><td>✔️</td><td>Your password used to login.</td></tr>
+</tbody>
+</table>
+<p><strong>Authorization:</strong></p>
+<p><code>admin</code></p>
+<p><strong>Example Request:</strong></p>
+<p><code>POST /api/v1/users</code></p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"User"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"user@test.com"</span>,
+    <span class="hljs-attr">"password"</span>: <span class="hljs-string">"123456"</span>
+}
+</code></pre>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">201 Created
+</code></pre>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"User"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"user@test.com"</span>,
+    <span class="hljs-attr">"avatar"</span>: <span class="hljs-string">"public\/users\/default.png"</span>,
+    <span class="hljs-attr">"created_at"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 01:32:30.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+    },
+    <span class="hljs-attr">"updated_at"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 01:32:30.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+    }
+  }
+}
+</code></pre>
+<p><strong>Error Responses:</strong></p>
+<pre><code class="hljs"><span class="hljs-symbol">422 </span>Unprocessable Entity
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="get-api-v1-users"></a><a href="#get-api-v1-users" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>GET /api/v1/users</code></h2>
 <p>Index all <code>Users</code>.</p>
+<p><strong>Parameters:</strong></p>
+<p>N/A</p>
+<p><strong>Authorization:</strong></p>
+<p>N/A</p>
+<p><strong>Example Request:</strong></p>
+<p><code>GET /api/v1/users</code></p>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">200 OK
+</code></pre>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Administrator"</span>,
+      <span class="hljs-attr">"email"</span>: <span class="hljs-string">"admin@matryoshkadoll.me"</span>,
+      <span class="hljs-attr">"created_at"</span>: {
+        <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
+        <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+      },
+      <span class="hljs-attr">"updated_at"</span>: {
+        <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
+        <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Vendor"</span>,
+      <span class="hljs-attr">"email"</span>: <span class="hljs-string">"vendor@matryoshkadoll.me"</span>,
+      <span class="hljs-attr">"created_at"</span>: {
+        <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
+        <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+      },
+      <span class="hljs-attr">"updated_at"</span>: {
+        <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
+        <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"User"</span>,
+      <span class="hljs-attr">"email"</span>: <span class="hljs-string">"user@matryoshkadoll.me"</span>,
+      <span class="hljs-attr">"created_at"</span>: {
+        <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
+        <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+      },
+      <span class="hljs-attr">"updated_at"</span>: {
+        <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
+        <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+      }
+    }
+  ],
+  <span class="hljs-attr">"links"</span>: {
+    <span class="hljs-attr">"first"</span>: <span class="hljs-string">"http:\/\/127.0.0.1:8000\/api\/v1\/users?page=1"</span>,
+    <span class="hljs-attr">"last"</span>: <span class="hljs-string">"http:\/\/127.0.0.1:8000\/api\/v1\/users?page=1"</span>,
+    <span class="hljs-attr">"prev"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"next"</span>: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-attr">"meta"</span>: {
+    <span class="hljs-attr">"current_page"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"from"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"last_page"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"http:\/\/127.0.0.1:8000\/api\/v1\/users"</span>,
+    <span class="hljs-attr">"per_page"</span>: <span class="hljs-number">15</span>,
+    <span class="hljs-attr">"to"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"total"</span>: <span class="hljs-number">3</span>
+  }
+}
+</code></pre>
+<p><strong>Error Responses:</strong></p>
+<p>N/A</p>
 <h2><a class="anchor" aria-hidden="true" id="get-api-v1-users-id"></a><a href="#get-api-v1-users-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>GET /api/v1/users/{id}</code></h2>
 <p>Get a <code>User</code> by ID.</p>
+<p><strong>Parameters:</strong></p>
+<p>N/A</p>
+<p><strong>Authorization:</strong></p>
+<p>N/A</p>
+<p><strong>Example Request:</strong></p>
+<p><code>GET /api/v1/users/1</code></p>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">200 OK
+</code></pre>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Administrator"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"admin@matryoshkadoll.me"</span>,
+    <span class="hljs-attr">"created_at"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+    },
+    <span class="hljs-attr">"updated_at"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+    }
+  }
+}
+</code></pre>
+<p><strong>Error Responses:</strong></p>
+<pre><code class="hljs css language-http">404 Not Found
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="patch-api-v1-users-id"></a><a href="#patch-api-v1-users-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>PATCH /api/v1/users/{id}</code></h2>
 <p>Update an existing <code>User</code> by ID.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>name</code></td><td><code>string</code></td><td></td><td>Your full name (e.g., <code>John Doe</code>)</td></tr>
+<tr><td><code>email</code></td><td><code>string</code></td><td></td><td>Your email address used to login.</td></tr>
+<tr><td><code>password</code></td><td><code>string</code></td><td></td><td>Your password used to login.</td></tr>
+</tbody>
+</table>
+<p><strong>Authorization:</strong></p>
+<p><code>admin</code></p>
+<p><strong>Example Request:</strong></p>
+<p><code>PATCH /api/v1/users/1</code></p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
+    <span class="hljs-attr">"password"</span>: <span class="hljs-string">"123123"</span>
+}
+</code></pre>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">200 OK
+</code></pre>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"user@test.com"</span>,
+    <span class="hljs-attr">"created_at"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 03:57:03.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+    },
+    <span class="hljs-attr">"updated_at"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 03:57:15.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+    }
+  }
+}
+</code></pre>
+<p><strong>Error Responses:</strong></p>
+<pre><code class="hljs css language-http">404 Not Found
+</code></pre>
+<pre><code class="hljs css language-http">422 Unprocessable Entity
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="delete-api-v1-users-id"></a><a href="#delete-api-v1-users-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>DELETE /api/v1/users/{id}</code></h2>
 <p>Delete an existing <code>User</code> by ID.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/8/2019 by unknown</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/server/api/v1/androidapps"><span class="arrow-prev">← </span><span class="function-name-prevnext">AndroidApps</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#post-api-v1-users"><code>POST /api/v1/users</code></a></li><li><a href="#get-api-v1-users"><code>GET /api/v1/users</code></a></li><li><a href="#get-api-v1-users-id"><code>GET /api/v1/users/{id}</code></a></li><li><a href="#patch-api-v1-users-id"><code>PATCH /api/v1/users/{id}</code></a></li><li><a href="#delete-api-v1-users-id"><code>DELETE /api/v1/users/{id}</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/Icon.svg" alt="Matryoshka" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/general/getting-started">Getting Started</a></div><div><h5>More</h5><a href="https://github.com/matryoshkadoll">GitHub</a><a class="github-button" href="https://github.com/matryoshkadoll/matryoshka-docs" data-icon="octicon-star" data-count-href="/matryoshkadoll/matryoshka-docs" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Matryoshka</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<p><strong>Parameters:</strong></p>
+<p>N/A</p>
+<p><strong>Authorization:</strong></p>
+<p><code>admin</code></p>
+<p><strong>Example Request:</strong></p>
+<p><code>DELETE /api/v1/users/1</code></p>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">204 No Content
+</code></pre>
+<p><strong>Error Responses:</strong></p>
+<pre><code class="hljs css language-http">404 Not Found
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="post-api-v1-users-id-avatar"></a><a href="#post-api-v1-users-id-avatar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POST /api/v1/users/{id}/avatar</code></h2>
+<p>Upload a new avatar for a <code>User</code> by ID.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>avatar</code></td><td><code>file</code></td><td>✔️</td><td>The image file to set as an avatar.</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE:</strong> Set HTTP header <code>Content-Type: multipart/form-data</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> There are some restrictions on <code>avatar</code>:</p>
+<ul>
+<li>Must be below <code>5MB</code> in size.</li>
+<li>Must be of filetype <code>jpg</code>, <code>bmp</code>, or <code>png</code>.</li>
+<li>The server converts it to a <code>256x256</code> <code>jpg</code> image after upload.</li>
+</ul>
+</blockquote>
+<p><strong>Authorization:</strong></p>
+<p><code>admin</code>, current <code>user</code></p>
+<p><strong>Example Request:</strong></p>
+<p><code>POST /api/v1/users/1/avatar</code></p>
+<pre><code class="hljs css language-http"><span class="hljs-attribute">avatar</span>: my_image.png
+</code></pre>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">201 Created
+</code></pre>
+<p><strong>Error Responses:</strong></p>
+<pre><code class="hljs css language-http">422 Unprocessable Entity
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="get-api-v1-users-id-avatar"></a><a href="#get-api-v1-users-id-avatar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>GET /api/v1/users/{id}/avatar</code></h2>
+<p>Get the raw image for the <code>User's</code> current avatar by ID.</p>
+<p><strong>Parameters:</strong></p>
+<p>N/A</p>
+<p><strong>Authorization:</strong></p>
+<p>N/A</p>
+<p><strong>Example Request:</strong></p>
+<p><code>GET /api/v1/users/1/avatar</code></p>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">200 OK
+</code></pre>
+<p><img src="/docs/assets/avatar.jpg" alt="avatar.jpg"></p>
+<p><strong>Error Responses:</strong></p>
+<p>N/A</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/10/2019 by Daniel Shevtsov</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/server/api/v1/androidapps"><span class="arrow-prev">← </span><span class="function-name-prevnext">AndroidApps</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#post-api-v1-users"><code>POST /api/v1/users</code></a></li><li><a href="#get-api-v1-users"><code>GET /api/v1/users</code></a></li><li><a href="#get-api-v1-users-id"><code>GET /api/v1/users/{id}</code></a></li><li><a href="#patch-api-v1-users-id"><code>PATCH /api/v1/users/{id}</code></a></li><li><a href="#delete-api-v1-users-id"><code>DELETE /api/v1/users/{id}</code></a></li><li><a href="#post-api-v1-users-id-avatar"><code>POST /api/v1/users/{id}/avatar</code></a></li><li><a href="#get-api-v1-users-id-avatar"><code>GET /api/v1/users/{id}/avatar</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/Icon.svg" alt="Matryoshka" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/general/getting-started">Getting Started</a></div><div><h5>More</h5><a href="https://github.com/matryoshkadoll">GitHub</a><a class="github-button" href="https://github.com/matryoshkadoll/matryoshka-docs" data-icon="octicon-star" data-count-href="/matryoshkadoll/matryoshka-docs" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Matryoshka</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
