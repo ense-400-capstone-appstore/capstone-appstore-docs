@@ -47,6 +47,8 @@ Create a new `AndroidApp`.
         "version": "1.0.0",
         "description": "My App 2",
         "price": 0,
+        "package_name": null,
+        "creator_id": 1,
         "created_at": {
             "date": "2019-02-11 04:00:43.000000",
             "timezone_type": 3,
@@ -103,6 +105,8 @@ N/A
       "version": "1.0.0",
       "description": "Quaerat voluptate quos rerum ut. At autem vel vero hic quis magnam odio ab. Expedita ut totam ipsam tempore qui sint vel. Ad voluptas quia amet rerum.",
       "price": 0,
+      "package_name": null,
+      "creator_id": 1,
       "created_at": {
         "date": "2019-02-11 02:55:34.000000",
         "timezone_type": 3,
@@ -120,6 +124,8 @@ N/A
       "version": "1.0.0",
       "description": "Vero et autem tenetur recusandae sunt. Sed amet et qui quisquam dolores. At dignissimos exercitationem voluptas adipisci et.",
       "price": 0,
+      "package_name": null,
+      "creator_id": 1,
       "created_at": {
         "date": "2019-02-11 02:55:34.000000",
         "timezone_type": 3,
@@ -137,6 +143,8 @@ N/A
       "version": "1.0.0",
       "description": "Error quod voluptate ducimus ex qui repellendus cupiditate beatae. Deleniti facere alias nobis. Qui molestias iste nam enim deserunt aut. Repudiandae impedit distinctio officiis deleniti qui.",
       "price": 34.33,
+      "package_name": null,
+      "creator_id": 1,
       "created_at": {
         "date": "2019-02-11 02:55:34.000000",
         "timezone_type": 3,
@@ -197,6 +205,8 @@ N/A
     "version": "1.0.0",
     "description": "Et reiciendis tenetur voluptas nesciunt pariatur quam. Expedita voluptas cupiditate assumenda assumenda consequuntur ad. Itaque qui inventore est itaque. Harum a soluta iure quae non harum maiores.",
     "price": 0,
+    "package_name": null,
+    "creator_id": 1,
     "avatar": "public\/android_apps\/default.png",
     "created_at": {
       "date": "2019-02-10 03:57:56.000000",
@@ -262,6 +272,8 @@ Update an existing `AndroidApp` by ID.
     "version": "1.0.0",
     "description": "My App",
     "price": 0,
+    "package_name": null,
+    "creator_id": 1,
     "created_at": {
       "date": "2019-02-11 02:55:34.000000",
       "timezone_type": 3,
@@ -456,3 +468,135 @@ N/A
 **Error Responses:**
 
 N/A
+
+## `GET /api/v1/android_apps/package_name/{package_name}`
+
+Get a single `AndroidApp` by searching for a specific `package_name`.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+N/A
+
+**Example Request:**
+
+`GET /api/v1/android_apps/package_name/com.google.android.youtube`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": {
+    "id": 6,
+    "name": "Test",
+    "version": "1.0.0",
+    "description": "Test",
+    "price": 0,
+    "package_name": "com.google.android.youtube",
+    "creator_id": 1,
+    "created_at": {
+      "date": "2019-03-10 04:10:01.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    },
+    "updated_at": {
+      "date": "2019-03-10 23:58:57.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    }
+  }
+}
+```
+
+**Error Responses:**
+
+```http
+404 Not Found
+```
+
+## `GET /api/v1/android_apps/{id}/categories`
+
+Get all `Categories` that this `AndroidApp` belongs to by ID.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+N/A
+
+**Example Request:**
+
+`GET /api/v1/android_apps/1/categories`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": [
+    {
+      "id": 2,
+      "name": "Business",
+      "created_at": "2019-03-10 04:03:36",
+      "updated_at": "2019-03-10 04:03:36",
+      "pivot": {
+        "android_app_id": 1,
+        "category_id": 2
+      }
+    },
+    {
+      "id": 4,
+      "name": "Entertainment",
+      "created_at": "2019-03-10 04:03:36",
+      "updated_at": "2019-03-10 04:03:36",
+      "pivot": {
+        "android_app_id": 1,
+        "category_id": 4
+      }
+    },
+    {
+      "id": 5,
+      "name": "Food",
+      "created_at": "2019-03-10 04:03:36",
+      "updated_at": "2019-03-10 04:03:36",
+      "pivot": {
+        "android_app_id": 1,
+        "category_id": 5
+      }
+    }
+  ],
+  "links": {
+    "first": "http:\/\/127.0.0.1:8000\/api\/v1\/android_apps\/1\/categories?page=1",
+    "last": "http:\/\/127.0.0.1:8000\/api\/v1\/android_apps\/1\/categories?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "http:\/\/127.0.0.1:8000\/api\/v1\/android_apps\/1\/categories",
+    "per_page": 15,
+    "to": 3,
+    "total": 3
+  }
+}
+```
+
+**Error Responses:**
+
+```http
+404 Not Found
+```

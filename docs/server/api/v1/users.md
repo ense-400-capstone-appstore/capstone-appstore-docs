@@ -3,8 +3,6 @@ id: users
 title: Users
 ---
 
-> This page is still under construction!
-
 ## `POST /api/v1/users`
 
 Create a new `User`.
