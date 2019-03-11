@@ -6,7 +6,7 @@
             {"zIndex":100}
           )
         });
-        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/en"><img class="logo" src="/img/Icon.svg" alt="Matryoshka"/><h2 class="headerTitleWithLogo">Matryoshka</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class="siteNavGroupActive"><a href="/docs/en/welcome" target="_self">Docs</a></li><li class=""><a href="/en/help" target="_self">Help</a></li><li class=""><a href="https://github.com/matryoshkadoll/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://matryoshkadoll.me" target="_self">Back to Matryoshka</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Server</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">General</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/welcome">Welcome</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">App</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/app/getting_started">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Server</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/server/getting_started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/en/server/cli">CLI Commands</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API v1</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/server/api/v1/authentication">Authentication</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/server/api/v1/androidapps">AndroidApps</a></li><li class="navListItem"><a class="navItem" href="/docs/en/server/api/v1/users">Users</a></li></ul></div></ul></div></div></section></div><script>
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/en"><img class="logo" src="/img/Icon.svg" alt="Matryoshka"/><h2 class="headerTitleWithLogo">Matryoshka</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class="siteNavGroupActive"><a href="/docs/en/welcome" target="_self">Docs</a></li><li class=""><a href="/en/help" target="_self">Help</a></li><li class=""><a href="https://github.com/matryoshkadoll/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://matryoshkadoll.me" target="_self">Back to Matryoshka</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Server</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">General</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/welcome">Welcome</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">App</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/app/getting_started">Getting Started</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Server</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/server/getting_started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/en/server/cli">CLI Commands</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API v1</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/server/api/v1/authentication">Authentication</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/server/api/v1/androidapps">AndroidApps</a></li><li class="navListItem"><a class="navItem" href="/docs/en/server/api/v1/categories">Categories</a></li><li class="navListItem"><a class="navItem" href="/docs/en/server/api/v1/users">Users</a></li></ul></div></ul></div></div></section></div><script>
             document.addEventListener('DOMContentLoaded', function() {
               createToggler('#navToggler', '#docsNav', 'docsSliderActive');
               createToggler('#tocToggler', 'body', 'tocActive');
@@ -68,6 +68,8 @@
         <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
         <span class="hljs-attr">"description"</span>: <span class="hljs-string">"My App 2"</span>,
         <span class="hljs-attr">"price"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"package_name"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"creator_id"</span>: <span class="hljs-number">1</span>,
         <span class="hljs-attr">"created_at"</span>: {
             <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 04:00:43.000000"</span>,
             <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
@@ -105,6 +107,8 @@
       <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
       <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Quaerat voluptate quos rerum ut. At autem vel vero hic quis magnam odio ab. Expedita ut totam ipsam tempore qui sint vel. Ad voluptas quia amet rerum."</span>,
       <span class="hljs-attr">"price"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"package_name"</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">"creator_id"</span>: <span class="hljs-number">1</span>,
       <span class="hljs-attr">"created_at"</span>: {
         <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
         <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
@@ -122,6 +126,8 @@
       <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
       <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Vero et autem tenetur recusandae sunt. Sed amet et qui quisquam dolores. At dignissimos exercitationem voluptas adipisci et."</span>,
       <span class="hljs-attr">"price"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"package_name"</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">"creator_id"</span>: <span class="hljs-number">1</span>,
       <span class="hljs-attr">"created_at"</span>: {
         <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
         <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
@@ -139,6 +145,8 @@
       <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
       <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Error quod voluptate ducimus ex qui repellendus cupiditate beatae. Deleniti facere alias nobis. Qui molestias iste nam enim deserunt aut. Repudiandae impedit distinctio officiis deleniti qui."</span>,
       <span class="hljs-attr">"price"</span>: <span class="hljs-number">34.33</span>,
+      <span class="hljs-attr">"package_name"</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">"creator_id"</span>: <span class="hljs-number">1</span>,
       <span class="hljs-attr">"created_at"</span>: {
         <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
         <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
@@ -186,6 +194,8 @@
     <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
     <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Et reiciendis tenetur voluptas nesciunt pariatur quam. Expedita voluptas cupiditate assumenda assumenda consequuntur ad. Itaque qui inventore est itaque. Harum a soluta iure quae non harum maiores."</span>,
     <span class="hljs-attr">"price"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"package_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"creator_id"</span>: <span class="hljs-number">1</span>,
     <span class="hljs-attr">"avatar"</span>: <span class="hljs-string">"public\/android_apps\/default.png"</span>,
     <span class="hljs-attr">"created_at"</span>: {
       <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-10 03:57:56.000000"</span>,
@@ -238,6 +248,8 @@
     <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
     <span class="hljs-attr">"description"</span>: <span class="hljs-string">"My App"</span>,
     <span class="hljs-attr">"price"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"package_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"creator_id"</span>: <span class="hljs-number">1</span>,
     <span class="hljs-attr">"created_at"</span>: {
       <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-02-11 02:55:34.000000"</span>,
       <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
@@ -367,7 +379,107 @@
 </code></pre>
 <p><strong>Error Responses:</strong></p>
 <p>N/A</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/10/2019 by Daniel Shevtsov</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/server/api/v1/authentication"><span class="arrow-prev">← </span><span>Authentication</span></a><a class="docs-next button" href="/docs/en/server/api/v1/users"><span>Users</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#post-api-v1-android-apps"><code>POST /api/v1/android_apps</code></a></li><li><a href="#get-api-v1-android-apps"><code>GET /api/v1/android_apps</code></a></li><li><a href="#get-api-v1-android-apps-id"><code>GET /api/v1/android_apps/{id}</code></a></li><li><a href="#patch-api-v1-android-apps-id"><code>PATCH /api/v1/android_apps/{id}</code></a></li><li><a href="#delete-api-v1-android-apps-id"><code>DELETE /api/v1/android_apps/{id}</code></a></li><li><a href="#post-api-v1-android-apps-id-avatar"><code>POST /api/v1/android_apps/{id}/avatar</code></a></li><li><a href="#get-api-v1-android-apps-id-avatar"><code>GET /api/v1/android_apps/{id}/avatar</code></a></li><li><a href="#post-api-v1-android-apps-id-file"><code>POST /api/v1/android_apps/{id}/file</code></a></li><li><a href="#get-api-v1-android-apps-id-file"><code>GET /api/v1/android_apps/{id}/file</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/Icon.svg" alt="Matryoshka" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/general/getting-started">Getting Started</a></div><div><h5>More</h5><a href="https://github.com/matryoshkadoll">GitHub</a><a class="github-button" href="https://github.com/matryoshkadoll/matryoshka-docs" data-icon="octicon-star" data-count-href="/matryoshkadoll/matryoshka-docs" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Matryoshka</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="get-api-v1-android-apps-package-name-package-name"></a><a href="#get-api-v1-android-apps-package-name-package-name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>GET /api/v1/android_apps/package_name/{package_name}</code></h2>
+<p>Get a single <code>AndroidApp</code> by searching for a specific <code>package_name</code>.</p>
+<p><strong>Parameters:</strong></p>
+<p>N/A</p>
+<p><strong>Authorization:</strong></p>
+<p>N/A</p>
+<p><strong>Example Request:</strong></p>
+<p><code>GET /api/v1/android_apps/package_name/com.google.android.youtube</code></p>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">200 OK
+</code></pre>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Test"</span>,
+    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Test"</span>,
+    <span class="hljs-attr">"price"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"package_name"</span>: <span class="hljs-string">"com.google.android.youtube"</span>,
+    <span class="hljs-attr">"creator_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"created_at"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-03-10 04:10:01.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+    },
+    <span class="hljs-attr">"updated_at"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2019-03-10 23:58:57.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"UTC"</span>
+    }
+  }
+}
+</code></pre>
+<p><strong>Error Responses:</strong></p>
+<pre><code class="hljs css language-http">404 Not Found
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="get-api-v1-android-apps-id-categories"></a><a href="#get-api-v1-android-apps-id-categories" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>GET /api/v1/android_apps/{id}/categories</code></h2>
+<p>Get all <code>Categories</code> that this <code>AndroidApp</code> belongs to by ID.</p>
+<p><strong>Parameters:</strong></p>
+<p>N/A</p>
+<p><strong>Authorization:</strong></p>
+<p>N/A</p>
+<p><strong>Example Request:</strong></p>
+<p><code>GET /api/v1/android_apps/1/categories</code></p>
+<p><strong>Example Response:</strong></p>
+<pre><code class="hljs css language-http">200 OK
+</code></pre>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Business"</span>,
+      <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-03-10 04:03:36"</span>,
+      <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-03-10 04:03:36"</span>,
+      <span class="hljs-attr">"pivot"</span>: {
+        <span class="hljs-attr">"android_app_id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"category_id"</span>: <span class="hljs-number">2</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">4</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Entertainment"</span>,
+      <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-03-10 04:03:36"</span>,
+      <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-03-10 04:03:36"</span>,
+      <span class="hljs-attr">"pivot"</span>: {
+        <span class="hljs-attr">"android_app_id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"category_id"</span>: <span class="hljs-number">4</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">5</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Food"</span>,
+      <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-03-10 04:03:36"</span>,
+      <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-03-10 04:03:36"</span>,
+      <span class="hljs-attr">"pivot"</span>: {
+        <span class="hljs-attr">"android_app_id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"category_id"</span>: <span class="hljs-number">5</span>
+      }
+    }
+  ],
+  <span class="hljs-attr">"links"</span>: {
+    <span class="hljs-attr">"first"</span>: <span class="hljs-string">"http:\/\/127.0.0.1:8000\/api\/v1\/android_apps\/1\/categories?page=1"</span>,
+    <span class="hljs-attr">"last"</span>: <span class="hljs-string">"http:\/\/127.0.0.1:8000\/api\/v1\/android_apps\/1\/categories?page=1"</span>,
+    <span class="hljs-attr">"prev"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"next"</span>: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-attr">"meta"</span>: {
+    <span class="hljs-attr">"current_page"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"from"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"last_page"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"http:\/\/127.0.0.1:8000\/api\/v1\/android_apps\/1\/categories"</span>,
+    <span class="hljs-attr">"per_page"</span>: <span class="hljs-number">15</span>,
+    <span class="hljs-attr">"to"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"total"</span>: <span class="hljs-number">3</span>
+  }
+}
+</code></pre>
+<p><strong>Error Responses:</strong></p>
+<pre><code class="hljs css language-http">404 Not Found
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/10/2019 by Daniel Shevtsov</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/server/api/v1/authentication"><span class="arrow-prev">← </span><span>Authentication</span></a><a class="docs-next button" href="/docs/en/server/api/v1/categories"><span>Categories</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#post-api-v1-android-apps"><code>POST /api/v1/android_apps</code></a></li><li><a href="#get-api-v1-android-apps"><code>GET /api/v1/android_apps</code></a></li><li><a href="#get-api-v1-android-apps-id"><code>GET /api/v1/android_apps/{id}</code></a></li><li><a href="#patch-api-v1-android-apps-id"><code>PATCH /api/v1/android_apps/{id}</code></a></li><li><a href="#delete-api-v1-android-apps-id"><code>DELETE /api/v1/android_apps/{id}</code></a></li><li><a href="#post-api-v1-android-apps-id-avatar"><code>POST /api/v1/android_apps/{id}/avatar</code></a></li><li><a href="#get-api-v1-android-apps-id-avatar"><code>GET /api/v1/android_apps/{id}/avatar</code></a></li><li><a href="#post-api-v1-android-apps-id-file"><code>POST /api/v1/android_apps/{id}/file</code></a></li><li><a href="#get-api-v1-android-apps-id-file"><code>GET /api/v1/android_apps/{id}/file</code></a></li><li><a href="#get-api-v1-android-apps-package-name-package-name"><code>GET /api/v1/android_apps/package_name/{package_name}</code></a></li><li><a href="#get-api-v1-android-apps-id-categories"><code>GET /api/v1/android_apps/{id}/categories</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/Icon.svg" alt="Matryoshka" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/general/getting-started">Getting Started</a></div><div><h5>More</h5><a href="https://github.com/matryoshkadoll">GitHub</a><a class="github-button" href="https://github.com/matryoshkadoll/matryoshka-docs" data-icon="octicon-star" data-count-href="/matryoshkadoll/matryoshka-docs" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Matryoshka</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
