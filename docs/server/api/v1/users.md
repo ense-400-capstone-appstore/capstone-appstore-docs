@@ -365,3 +365,76 @@ N/A
 **Error Responses:**
 
 N/A
+
+## `GET /api/v1/users/{id}/android_apps`
+
+Get all owned `AndroidApps` for a `User` by ID.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+`admin`, current `user`
+
+**Example Request:**
+
+`GET /api/v1/users/{id}/android_apps`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Farrell-Dicki",
+      "version": "1.0.0",
+      "description": "Et fugiat praesentium fugit sed. Ex atque iure hic. Quas qui sunt adipisci accusamus incidunt consequatur saepe corporis.",
+      "price": 0,
+      "package_name": null,
+      "creator_id": null,
+      "pivot": {
+        "user_id": 1,
+        "android_app_id": 1
+      },
+      "created_at": {
+        "date": "2019-03-14 01:35:15.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "updated_at": {
+        "date": "2019-03-14 02:32:15.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    }
+  ],
+  "links": {
+    "first": "http:\/\/127.0.0.1:8000\/api\/v1\/users\/1\/android_apps?page=1",
+    "last": "http:\/\/127.0.0.1:8000\/api\/v1\/users\/1\/android_apps?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "http:\/\/127.0.0.1:8000\/api\/v1\/users\/1\/android_apps",
+    "per_page": 15,
+    "to": 1,
+    "total": 1
+  }
+}
+```
+
+**Error Responses:**
+
+```http
+404 Not Found
+```
