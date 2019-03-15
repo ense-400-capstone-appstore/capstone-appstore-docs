@@ -455,7 +455,7 @@ N/A
 
 **Example Request:**
 
-`GET /api/v1/users/{id}/created_android_apps`
+`GET /api/v1/users/1/created_android_apps`
 
 **Example Response:**
 
