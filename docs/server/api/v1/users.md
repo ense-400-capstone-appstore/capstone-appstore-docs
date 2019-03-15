@@ -438,3 +438,74 @@ N/A
 ```http
 404 Not Found
 ```
+
+## `GET /api/v1/users/{id}/created_android_apps`
+
+Get all owned `AndroidApps` for a `User` by ID.
+
+> **NOTE:** *Owned* `AndroidApps` means `AndroidApps` that a user has purchased from other users.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+`admin`, current `vendor`
+
+**Example Request:**
+
+`GET /api/v1/users/{id}/created_android_apps`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": [
+    {
+      "id": 4,
+      "name": "Firefox Browser fast & private",
+      "version": "65.0",
+      "description": "Experience a fast, smart and personal Web. Firefox is the independent, people-first browser made by Mozilla, voted the Most Trusted Internet Company for Privacy. Upgrade today and join hundreds of millions who depend on Firefox for a more personal browsing experience.",
+      "price": 0,
+      "package_name": null,
+      "creator_id": 1,
+      "created_at": {
+        "date": "2019-02-11 03:15:37.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "updated_at": {
+        "date": "2019-03-14 04:46:30.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    }
+  ],
+  "links": {
+    "first": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/1\/created_android_apps?page=1",
+    "last": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/1\/created_android_apps?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/1\/created_android_apps",
+    "per_page": 15,
+    "to": 5,
+    "total": 5
+  }
+}
+```
+
+**Error Responses:**
+
+```http
+404 Not Found
+```

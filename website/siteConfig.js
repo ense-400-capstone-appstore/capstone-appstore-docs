@@ -5,7 +5,7 @@
 // const users = [];
 
 const siteConfig = {
-    title: "Matryoshka", // Title for your website.
+    title: "MATRYOSHKA", // Title for your website.
     tagline: "Documentation for the Matryoshka Project",
     url: "https://docs.matryoshkadoll.me", // Your website URL
     baseUrl: "/", // Base URL for your project */
@@ -83,7 +83,6 @@ const siteConfig = {
     // Add custom scripts here that would be placed in <script> tags.
     scripts: [
         "https://buttons.github.io/buttons.js",
-        "https://buttons.github.io/buttons.js",
         "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
         "/js/code-block-buttons.js"
     ],
@@ -99,7 +98,7 @@ const siteConfig = {
     scrollToTop: true,
 
     // Collapsible sidebars
-    docsSideNavCollapsible: true,
+    docsSideNavCollapsible: false,
 
     // Last updated on text
     enableUpdateBy: true,

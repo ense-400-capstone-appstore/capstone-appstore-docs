@@ -221,11 +221,7 @@ class Index extends React.Component {
         return (
             <div>
                 <HomeSplash language={language} />
-                <h2 style={{ textAlign: "center" }}>IMPORTANT NOTE</h2>
-                <h3 style={{ textAlign: "center", color: "FireBrick" }}>
-                    This project is still very early into development and highly
-                    unstable!
-                </h3>
+
                 <div className="mainContainer">
                     {/* <Features />
                     <FeatureCallout />
