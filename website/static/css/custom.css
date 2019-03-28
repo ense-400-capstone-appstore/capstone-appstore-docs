@@ -1,5 +1,44 @@
 /* your custom css */
 
+/* Home */
+.homeContainer {
+  background-color: #6075E0;
+  height: 50vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+.homeContainer .inner {
+  color: white;
+}
+
+.projectTitle,
+.promoSection .button {
+  color: white;
+  border-color: white;
+}
+
+.promoSection .button:hover {
+  color: #6075E0;
+  background-color: white;
+}
+
+.homeContainer .homeSplashFade,
+.homeContainer .homeWrapper,
+.homeContainer .inner {
+  height: 100%;
+}
+
+.homeContainer .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContainer {
+  padding: 0;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 

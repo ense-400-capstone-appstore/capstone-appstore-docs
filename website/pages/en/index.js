@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 const React = require("react");
 
 const CompLibrary = require("../../core/CompLibrary.js");
@@ -15,33 +8,19 @@ const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
-function imgUrl(img) {
-    return `${siteConfig.baseUrl}img/${img}`;
-}
+const imgUrl = img => `${siteConfig.baseUrl}img/${img}`;
+const docUrl = (doc, lang) =>
+    `${siteConfig.baseUrl}docs/${lang ? `${lang}/` : ""}${doc}`;
+const pageUrl = (page, lang) =>
+    siteConfig.baseUrl + (lang ? `${lang}/` : "") + page;
 
-function docUrl(doc, language) {
-    return `${siteConfig.baseUrl}docs/${language ? `${language}/` : ""}${doc}`;
-}
-
-function pageUrl(page, language) {
-    return siteConfig.baseUrl + (language ? `${language}/` : "") + page;
-}
-
-class Button extends React.Component {
-    render() {
-        return (
-            <div className="pluginWrapper buttonWrapper">
-                <a
-                    className="button"
-                    href={this.props.href}
-                    target={this.props.target}
-                >
-                    {this.props.children}
-                </a>
-            </div>
-        );
-    }
-}
+const Button = props => (
+    <div className="pluginWrapper buttonWrapper">
+        <a className="button" href={props.href} target={props.target}>
+            {props.children}
+        </a>
+    </div>
+);
 
 Button.defaultProps = {
     target: "_self"
@@ -52,12 +31,6 @@ const SplashContainer = props => (
         <div className="homeSplashFade">
             <div className="wrapper homeWrapper">{props.children}</div>
         </div>
-    </div>
-);
-
-const Logo = props => (
-    <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
     </div>
 );
 
@@ -76,24 +49,19 @@ const PromoSection = props => (
     </div>
 );
 
-class HomeSplash extends React.Component {
-    render() {
-        const language = this.props.language || "";
-        return (
-            <SplashContainer>
-                <div className="inner">
-                    <ProjectTitle />
-                    <PromoSection>
-                        <Button href={docUrl("welcome", language)}>
-                            Welcome
-                        </Button>
-                        <Button href={siteConfig.orgUrl}>GitHub</Button>
-                    </PromoSection>
-                </div>
-            </SplashContainer>
-        );
-    }
-}
+const HomeSplash = props => (
+    <SplashContainer>
+        <div className="inner">
+            <ProjectTitle />
+            <PromoSection>
+                <Button href={docUrl("welcome", props.lang || "")}>
+                    Read the Docs
+                </Button>
+                <Button href={siteConfig.orgUrl}>GitHub</Button>
+            </PromoSection>
+        </div>
+    </SplashContainer>
+);
 
 const Block = props => (
     <Container
@@ -107,61 +75,6 @@ const Block = props => (
             layout={props.layout}
         />
     </Container>
-);
-
-const Features = () => (
-    <Block layout="fourColumn">
-        {[
-            {
-                content: "This is the content of my feature",
-                image: imgUrl("Icon.svg"),
-                imageAlign: "top",
-                title: "Feature One"
-            },
-            {
-                content: "The content of my second feature",
-                image: imgUrl("Icon.svg"),
-                imageAlign: "top",
-                title: "Feature Two"
-            }
-        ]}
-    </Block>
-);
-
-const FeatureCallout = () => (
-    <div
-        className="productShowcaseSection paddingBottom"
-        style={{ textAlign: "center" }}
-    >
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-    </div>
-);
-
-const LearnHow = () => (
-    <Block background="light">
-        {[
-            {
-                content: "Talk about learning how to use this",
-                image: imgUrl("Icon.svg"),
-                imageAlign: "right",
-                title: "Learn How"
-            }
-        ]}
-    </Block>
-);
-
-const TryOut = () => (
-    <Block id="try">
-        {[
-            {
-                content: "Talk about trying this out",
-                image: imgUrl("Icon.svg"),
-                imageAlign: "left",
-                title: "Try it Out"
-            }
-        ]}
-    </Block>
 );
 
 const Description = props => (
@@ -184,55 +97,85 @@ const Description = props => (
     </Block>
 );
 
-const Showcase = props => {
-    if ((siteConfig.users || []).length === 0) {
-        return null;
-    }
+const FeatureDashboard = props => (
+    <Block>
+        {[
+            {
+                image: imgUrl("home/feature1.png")
+            },
+            {
+                title: "A home for your apps",
+                content:
+                    "Manage installed apps and discover new apps through our sleek interface. Vendors can also use the same dashboard to create new apps and groups to share with their users."
+            }
+        ]}
+    </Block>
+);
 
-    const showcase = siteConfig.users
-        .filter(user => user.pinned)
-        .map(user => (
-            <a href={user.infoLink} key={user.infoLink}>
-                <img src={user.image} alt={user.caption} title={user.caption} />
-            </a>
-        ));
+const FeatureAdmin = props => (
+    <Block>
+        {[
+            {
+                title: "Power for Admins",
+                content:
+                    "Administrators gain access to a separate dashboard made specifically for viewing the big picture. The dashboard is optimized for operations ranging from approving new apps to changing system-wide settings."
+            },
+            {
+                image: imgUrl("home/feature2.png")
+            }
+        ]}
+    </Block>
+);
+
+const FeatureApp = props => (
+    <Block>
+        {[
+            {
+                image: imgUrl("home/feature3.png")
+            },
+            {
+                title: "Handheld Convenience",
+                content:
+                    "Any app you have access to can be downloaded and updated through our very own mobile app. After signing up, you can manage all of your apps directly from your phone."
+            }
+        ]}
+    </Block>
+);
+
+const FeatureOpenSource = props => (
+    <Block>
+        {[
+            {
+                title: "Open Source!",
+                content:
+                    "We believe that open-source software makes the world better for everyone. Matryoshka is available to use both on our hardware or, if you choose, on your own hardware on-premises. Simply visit our GitHub and download the latest version of the application, deploy it to your hardware, and your own private appstore is ready to go!"
+            }
+        ]}
+    </Block>
+);
+
+const Features = props => (
+    <React.Fragment>
+        <FeatureDashboard />
+        <FeatureAdmin />
+        <FeatureApp />
+        <FeatureOpenSource />
+    </React.Fragment>
+);
+
+const Index = props => {
+    const language = props.language || "";
 
     return (
-        <div className="productShowcaseSection paddingBottom">
-            <h2>Who is Using This?</h2>
-            <p>This project is used by all these people</p>
-            <div className="logos">{showcase}</div>
-            <div className="more-users">
-                <a
-                    className="button"
-                    href={pageUrl("users.html", props.language)}
-                >
-                    More {siteConfig.title} Users
-                </a>
+        <div>
+            <HomeSplash language={language} />
+
+            <div className="mainContainer">
+                <Description language={language} />
+                <Features />
             </div>
         </div>
     );
 };
-
-class Index extends React.Component {
-    render() {
-        const language = this.props.language || "";
-
-        return (
-            <div>
-                <HomeSplash language={language} />
-
-                <div className="mainContainer">
-                    {/* <Features />
-                    <FeatureCallout />
-                    <LearnHow />
-                    <TryOut /> */}
-                    <Description language={language} />
-                    {/* <Showcase language={language} /> */}
-                </div>
-            </div>
-        );
-    }
-}
 
 module.exports = Index;
