@@ -10,5 +10,6 @@
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/server/api/v1/users</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/server/api/v1/users" /> </url>
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/server/cli</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/server/cli" /> </url>
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/server/getting_started</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/server/getting_started" /> </url>
+<url> <loc>https://docs.matryoshkadoll.me/docs/en/user_manual</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/user_manual" /> </url>
 <url> <loc>https://docs.matryoshkadoll.me/docs/en/welcome</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.matryoshkadoll.me/docs/en/welcome" /> </url>
 </urlset>
