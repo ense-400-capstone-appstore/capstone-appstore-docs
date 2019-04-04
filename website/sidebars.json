@@ -1,6 +1,6 @@
 {
     "docs": {
-        "General": ["welcome"],
+        "General": ["welcome", "user_manual"],
         "App": ["app/getting_started"],
         "Server": [
             "server/getting_started",

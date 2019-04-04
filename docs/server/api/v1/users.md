@@ -296,6 +296,53 @@ N/A
 404 Not Found
 ```
 
+## `GET /api/v1/users/current`
+
+Get the current `User` (you).
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+N/A
+
+**Example Request:**
+
+`GET /api/v1/users/current`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": {
+    "id": 1,
+    "name": "Administrator",
+    "email": "admin@matryoshkadoll.me",
+    "created_at": {
+      "date": "2019-02-06 23:33:46.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    },
+    "updated_at": {
+      "date": "2019-02-07 04:37:14.000000",
+      "timezone_type": 3,
+      "timezone": "UTC"
+    }
+  }
+}
+```
+
+**Error Responses:**
+
+N/A
+
+
 ## `POST /api/v1/users/{id}/avatar`
 
 Upload a new avatar for a `User` by ID.
@@ -500,6 +547,152 @@ N/A
     "per_page": 15,
     "to": 5,
     "total": 5
+  }
+}
+```
+
+**Error Responses:**
+
+```http
+404 Not Found
+```
+
+## `GET /api/v1/users/{id}/groups`
+
+Get an index of `Groups` that a `User` by ID is a member of.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+`admin`, current `user`
+
+**Example Request:**
+
+`GET /api/v1/users/1/groups`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Administrator's Group",
+      "created_at": {
+        "date": "2019-03-28 02:42:53.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "updated_at": {
+        "date": "2019-04-02 16:28:48.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "created_at": {
+        "date": "2019-03-30 11:45:02.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "updated_at": {
+        "date": "2019-03-30 11:45:02.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    }
+  ],
+  "links": {
+    "first": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/2\/groups?page=1",
+    "last": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/2\/groups?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/2\/groups",
+    "per_page": 15,
+    "to": 2,
+    "total": 2
+  }
+}
+```
+
+**Error Responses:**
+
+```http
+401 Unauthorized
+```
+
+```http
+404 Not Found
+```
+
+## `GET /api/v1/users/{id}/created_groups`
+
+Get an index of `Groups` that a `User` by ID created.
+
+**Parameters:**
+
+N/A
+
+**Authorization:**
+
+N/A
+
+**Example Request:**
+
+`GET /api/v1/users/1/created_groups`
+
+**Example Response:**
+
+```http
+200 OK
+```
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Administrator's Group",
+      "created_at": {
+        "date": "2019-03-28 02:42:53.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "updated_at": {
+        "date": "2019-04-02 16:28:48.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    }
+  ],
+  "links": {
+    "first": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/1\/created_groups?page=1",
+    "last": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/1\/created_groups?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "https:\/\/matryoshkadoll.me\/api\/v1\/users\/1\/created_groups",
+    "per_page": 15,
+    "to": 1,
+    "total": 1
   }
 }
 ```
